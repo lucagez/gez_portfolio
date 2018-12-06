@@ -1,0 +1,22 @@
+{
+  "name": "gez_portfolio",
+  "version": "1.0.0",
+  "description": "my personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucagez/gez_portfolio.git"
+  },
+  "author": "Luca Gesmundo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucagez/gez_portfolio/issues"
+  },
+  "homepage": "https://github.com/lucagez/gez_portfolio#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.10.3"
+  }
+}
