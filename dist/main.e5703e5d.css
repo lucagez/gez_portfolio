@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin");
+@font-face {
+  font-family: "Charter";
+  src: url("charter_regular-webfont.9900c9f5.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Charter";
+  src: url("charter_italic-webfont.671ffdaa.woff") format("woff");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Charter";
+  src: url("charter_bold-webfont.d172d3d9.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+body {
+  background: #444;
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1, p, a {
+  color: #fff;
+}
+
+h1 {
+  font-family: "Charter", serif;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+}
+
+p {
+  font-family: "Charter", serif;
+  letter-spacing: -0.04em;
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.me-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "wkma ." "me projects" "touch .";
+}
+
+.me {
+  grid-area: me;
+  display: grid;
+  grid-template-columns: auto minmax(450px, 750px) auto;
+}
+.me h1 {
+  font-size: 7.594em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+.me p {
+  font-family: "Cabin", sans-serif;
+  font-size: 5.063em;
+}
+
+.case {
+  grid-column: 2;
+}
