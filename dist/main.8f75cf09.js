@@ -121,6 +121,206 @@ var _default = function _default() {
 };
 
 exports.default = _default;
+},{}],"../media/me.jpg":[function(require,module,exports) {
+module.exports = "/me.b633877c.jpg";
+},{}],"../js/modules/label.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _me = _interopRequireDefault(require("../../media/me.jpg"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var _default = function _default() {
+  var label = document.querySelector('.label');
+  var title = document.querySelector('.title');
+  label.innerHTML = "\n    <img src=\"".concat(_me.default, "\"/>\n  ");
+  title.addEventListener('mousemove', function (e) {
+    label.style = "\n      display: unset;\n      transform: translate(".concat(e.clientX + 80, "px, ").concat(e.clientY - 300, "px);\n    ");
+    title.addEventListener('mouseout', function () {
+      return label.style.display = 'none';
+    });
+  });
+};
+
+exports.default = _default;
+},{"../../media/me.jpg":"../media/me.jpg"}],"../js/modules/hist.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var Hist =
+/*#__PURE__*/
+function () {
+  function Hist(props) {
+    _classCallCheck(this, Hist);
+
+    this.data = props.data || [];
+    this.style = props.style || null;
+    this.id = props.id || 1;
+    this.parent = document.querySelector(props.parent || 'body');
+    this.has_at_least_one_negative = this.data.map(function (v) {
+      return v.value;
+    }).some(function (v) {
+      return v < 0;
+    });
+    this.bar = this.bar.bind(this);
+    this.make_tool = this.make_tool.bind(this);
+  }
+
+  _createClass(Hist, [{
+    key: "make",
+    value: function make() {
+      var _this = this;
+
+      this.make_container();
+      this.make_tool();
+      this.has_at_least_one_negative ? this.has_negative() : null;
+      this.data.map(function (val, index) {
+        return _this.bar(val, index, false);
+      });
+      'undicibarre'.split('').forEach(function (e, i) {
+        return _this.horizontal_bar(i);
+      });
+      this.fluid_params();
+      this.update();
+    }
+  }, {
+    key: "bar",
+    value: function bar(val, index) {
+      var log = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+      var b = document.createElement('div');
+      var label = document.createElement('div');
+      var style = val.style ? val.style : null;
+
+      if (val.value < 0) {
+        b.classList.add('negative-bar');
+        label.classList.add('negative-label');
+      }
+
+      b.classList.add("bar");
+      b.classList.add("bar-".concat(index));
+      b.style = style;
+      label.classList.add("label");
+      label.classList.add("label-".concat(index));
+      label.innerText = val.label;
+      b.appendChild(label);
+      this.write_values(b, val.value, val.label);
+      this.chart.appendChild(b);
+      setTimeout(function () {
+        return b.style.height = log ? "".concat(Math.log(Math.abs(val.value)), "%") : "".concat(Math.abs(val.value), "%");
+      }, .1);
+    }
+  }, {
+    key: "horizontal_bar",
+    value: function horizontal_bar(index) {
+      var h = document.createElement('hr');
+      h.classList.add('horizontal-bar');
+      h.classList.add("horizontal-bar-".concat(index));
+      h.style.top = "".concat(index * 9.02, "%");
+      this.chart_container.appendChild(h);
+    }
+  }, {
+    key: "has_negative",
+    value: function has_negative() {
+      this.chart_container.style.gridTemplateAreas = '"chart""."';
+    }
+  }, {
+    key: "write_values",
+    value: function write_values(el, value, label) {
+      el.setAttribute('value', value);
+      el.setAttribute('label', label);
+    }
+  }, {
+    key: "make_container",
+    value: function make_container() {
+      this.chart_container = document.createElement('div');
+      this.chart = document.createElement('div');
+      this.chart_container.classList.add('chart-container');
+      this.chart.classList.add('chart', "grapho-".concat(this.id));
+      this.chart_container.appendChild(this.chart);
+      this.parent.appendChild(this.chart_container);
+    }
+  }, {
+    key: "make_tool",
+    value: function make_tool() {
+      var _this2 = this;
+
+      this.tool = document.createElement('div');
+      this.tool.classList.add('tool');
+      this.chart_container.appendChild(this.tool);
+      this.chart_container.addEventListener('mousemove', function (e) {
+        var pos = _this2.tool.getBoundingClientRect();
+
+        var x = e.clientX;
+        var y = e.clientY + 20;
+        x > window.innerWidth / 2 ? x -= 70 : null;
+        y > window.innerHeight / 2 ? y -= 200 : null;
+        _this2.tool.style = "\n        top: ".concat(y + 20, "px;\n        left: ").concat(x, "px;\n        visibility: visible;\n      ");
+        e.target.attributes['value'] ? _this2.tool.innerHTML = "\n        <h1>".concat(e.target.attributes['value'].value, "</h1>\n        <p>").concat(e.target.attributes['label'].value, "</p>\n      ") : _this2.tool.style = "visibility: hidden;";
+      });
+    }
+  }, {
+    key: "update",
+    value: function update() {
+      var _this3 = this;
+
+      window.addEventListener('resize', function () {
+        return _this3.fluid_params();
+      });
+    }
+  }, {
+    key: "fluid_params",
+    value: function fluid_params() {
+      var _this4 = this;
+
+      var bars = this.chart.querySelectorAll('.bar');
+      var labels = this.chart.querySelectorAll('.label');
+      var dimensions = this.chart.getBoundingClientRect();
+      var density = bars.length / dimensions.width * 1000;
+      var size = density > 35 ? {
+        font: 11,
+        margin: 2
+      } : {
+        font: 16,
+        margin: 10
+      };
+      bars.forEach(function (e) {
+        return e.style.fontSize = "".concat(size.font, "px");
+      });
+      labels.forEach(function (e) {
+        var has_negative_class = e.classList.value.split(' ').indexOf('negative-label');
+        console.log(has_negative_class);
+        var style = has_negative_class != -1 ? {
+          translate: _this4.has_at_least_one_negative ? -dimensions.height + size.font - 25 : -25,
+          rotate: 180
+        } : {
+          translate: _this4.has_at_least_one_negative ? dimensions.height + 25 : 25,
+          rotate: 0
+        };
+        e.style.transform = "translateY(".concat(style.translate, "px) rotate(").concat(style.rotate - 25, "deg)");
+      });
+      this.chart.style.gridColumnGap = "".concat(size.margin, "px");
+    }
+  }]);
+
+  return Hist;
+}();
+
+exports.default = Hist;
 },{}],"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
@@ -199,12 +399,35 @@ module.exports = reloadCSS;
 
 var _birds = _interopRequireDefault(require("./modules/birds.js"));
 
+var _label = _interopRequireDefault(require("./modules/label.js"));
+
+var _hist = _interopRequireDefault(require("./modules/hist.js"));
+
 require("normalize.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 (0, _birds.default)();
-},{"./modules/birds.js":"../js/modules/birds.js","normalize.css":"../../node_modules/normalize.css/normalize.css"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+(0, _label.default)();
+var chart_data = [{
+  value: 50,
+  label: 'lol'
+}, {
+  value: 30,
+  label: 'lol'
+}, {
+  value: 40,
+  label: 'lol'
+}, {
+  value: 70,
+  label: 'lol'
+}];
+var config = {
+  data: chart_data,
+  parent: '.work'
+};
+var chart = new _hist.default(config).make();
+},{"./modules/birds.js":"../js/modules/birds.js","./modules/label.js":"../js/modules/label.js","./modules/hist.js":"../js/modules/hist.js","normalize.css":"../../node_modules/normalize.css/normalize.css"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -231,7 +454,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33209" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "36859" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

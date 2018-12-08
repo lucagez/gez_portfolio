@@ -1,17 +1,16 @@
 $rotation: 10deg;
-$translate: 40px;
+$translate: 60px;
 
 .bird {
   position: absolute;
-  width: 40px;
+  width: 80px;
   z-index: -1;
-  transform: translateX(-10vw);
+  transform: translateX(-100px);
   bottom: 0;
   animation: bird 20s infinite ease-in-out;
 }
 
 .body {
-  // transform-origin: 50% 50%;
   animation: body 3s infinite;
 }
 
@@ -28,7 +27,7 @@ $translate: 40px;
 
 @keyframes body {
   0% {transform: translateY($translate);}
-  50% {transform: translateY(-$translate * 3);}
+  50% {transform: translateY(-$translate * 2);}
   100% {transform: translateY($translate);}
 }
 
