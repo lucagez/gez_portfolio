@@ -104,7 +104,24 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+})({"../js/modules/birds.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _default = function _default() {
+  var birds = document.querySelectorAll('.bird');
+  birds.forEach(function (bird, index) {
+    bird.style.animationDelay = "".concat(Math.random() * 10 * Math.sqrt(index), "s");
+    bird.querySelector('.body').style.animationDelay = "".concat(Math.random() * 3, "s");
+  });
+};
+
+exports.default = _default;
+},{}],"../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -180,8 +197,14 @@ module.exports = reloadCSS;
 },{"_css_loader":"../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../js/main.js":[function(require,module,exports) {
 "use strict";
 
+var _birds = _interopRequireDefault(require("./modules/birds.js"));
+
 require("normalize.css");
-},{"normalize.css":"../../node_modules/normalize.css/normalize.css"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+(0, _birds.default)();
+},{"./modules/birds.js":"../js/modules/birds.js","normalize.css":"../../node_modules/normalize.css/normalize.css"}],"../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -208,7 +231,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "38607" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "33209" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

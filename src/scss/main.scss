@@ -1,33 +1,36 @@
-@import url('https://fonts.googleapis.com/css?family=Cabin');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
+@import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Muli');
 
-@import '_fontface';
+@import '_bird';
+@import '_hypno';
+
+$title-size: 72px;
+$sub-size: 48px;
+$nav-size: 26px;
 
 body {
-  background: #444;
+  background: #333;
   margin: 0;
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
 }
 
 h1, p, a {
-  color: #fff;
+  color: #F9F9F9;
 }
 
 h1 {
-  font-family: 'Charter', serif;
-  font-weight: bold;
-  // font-size: 102px;
-  // letter-spacing: 0.28em;
-  // margin: 0;
+  font-family: 'Libre Baskerville', serif;
 }
 
 p {
-  font-family: 'Charter', serif;
-  // font-size: 5em;
-  letter-spacing: -0.04em;
-  margin-top: 0;
-  // text-align: justify;
-  // hyphens: auto;
+  font-family: 'Muli', sans-serif;
+
+}
+
+a {
+  cursor: pointer;
 }
 
 .me-container {
@@ -35,7 +38,7 @@ p {
   width: 100%;
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: 
     "wkma ."
@@ -47,27 +50,29 @@ p {
 .me {
   grid-area: me;
   display: grid;
-  grid-template-columns: auto minmax(672px, 750px) auto;
   h1 {
-    font-size: 5.063em;
-    letter-spacing: 0.08em;
+    font-size: $title-size;
+    font-weight: 400;
+    letter-spacing: 0.09em;
     margin: 0;
   }
   p {
-    // font-family: 'Cabin', sans-serif;
     color: #999;
-    font-size: 3.375em;
+    font-size: $sub-size;
+    letter-spacing: -0.05em;
+    margin: 0;
   }
   span {
     color: #999;
     text-decoration: underline;
+    text-decoration-color: #999;
     transition: all 1s;
   }
 }
 
 .me:hover {
   span {
-    color: palevioletred;
+    // color: palevioletred;
   }
 }
 
@@ -75,54 +80,27 @@ p {
   grid-column: 2; 
 }
 
-.touch, .work, .wkma {
-  display: flex;
+.wkma {
+  grid-area: wkma;
+  position: relative;
   height: 100%;
   width: 100%;
   p {
+    position: relative;
     display: inline-block;
+    margin: 0;
+    // transform-origin: 0 0;
     color: #999;
-    font-size: 2.25em;
+    font-size: $nav-size;
     transition: all .5s;
+
+    padding: 20px 0 0 40px;
   }
   span {
     display: inline-block;
-    transform: translateY(2px);
+    // transform: translateY(2px);
   }
 }
 
-.touch {
-  text-align: center;
-  grid-area: touch;
-  p {
-    // transform-origin: 0 0;
-    transform: rotate(90deg);
-  }
-}
 
-.wkma {
-  grid-area: wkma;
-  p {
-    // transform: rotate(-90deg);
-  }
-}
-
-.work {
-  grid-area: work;
-}
-
-.work:hover, .wkma:hover {
-  p {
-    font-size: 5.063em;
-    color: palevioletred;
-  }
-}
-
-.touch:hover {
-  p {
-    font-size: 5.063em;
-    color: palevioletred;
-    transform: rotate(0);
-  }
-}
 

@@ -1,0 +1,14 @@
+mixin bird
+  .bird
+    svg.body(viewBox='0 0 186 156', fill='none', xmlns='http://www.w3.org/2000/svg')
+      path(fill-rule='evenodd', clip-rule='evenodd', d='M141.252 60H36.0012L39 89C39 89 83.6144 126.4 116.192 107.826C148.769 89.2529 141.252 60 141.252 60Z', fill='#C4C4C4')
+      path(d='M125.017 71.9999L178.001 77.0863L123.001 92.9948L125.017 71.9999Z', fill='#C4C4C4')
+      rect(x='2.0011', y='65.9999', width='68', height='11', fill='#C4C4C4')
+      rect(x='2.94153', y='82.2459', width='66.5697', height='11', transform='rotate(-13.2396 2.94153 82.2459)', fill='#C4C4C4')
+      path.wing(d='M34.6539 0.691315L116.039 65.1827L82.179 107.913L34.6539 0.691315Z', fill='#C4C4C4')
+
+- var n = 0;
+  while n < 20
+    +bird(n++)
+
+

@@ -7,14 +7,16 @@ html(lang="en")
     link(rel="stylesheet" href="../scss/main.scss")
   body
     .me-container
+    
       .me
         .case
           h1 Luca <br> Gesmundo
-          p <a href="/"><span>data visualization</span></a> and<br><a href="/"><span>front end</span></a> developer
-      .work
-        p work <span>➡</span>
-      .touch
-        p get in touch <span>➡</span>
+          p <a href="/"><span>Data visualization</span></a> and<br><a href="/"><span>Front end</span></a> developer
       .wkma
-        p what keeps me alive <span>➡</span>
+        .nav
+          p <a>work <span>➡</span></a>
+          p <a>get in touch <span>➡</span></a>
+          p <a>me? <span>➡</span></a>
+      include ./templates/bird.pug
+      //- include ./templates/hypno.pug
     script(async src="../js/main.js")

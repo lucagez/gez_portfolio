@@ -1,0 +1,38 @@
+$rotation: 10deg;
+$translate: 40px;
+
+.bird {
+  position: absolute;
+  width: 40px;
+  z-index: -1;
+  transform: translateX(-10vw);
+  bottom: 0;
+  animation: bird 20s infinite ease-in-out;
+}
+
+.body {
+  // transform-origin: 50% 50%;
+  animation: body 3s infinite;
+}
+
+.wing {
+  transform-origin: 60% 60%;
+  animation: wing 2s infinite linear;
+}
+
+@keyframes wing {
+  0% {transform: rotateX(0deg);}
+  50% {transform: rotateX(150deg) translateY(22px);}
+  100% {transform: rotateX(0deg);}
+}
+
+@keyframes body {
+  0% {transform: translateY($translate);}
+  50% {transform: translateY(-$translate * 3);}
+  100% {transform: translateY($translate);}
+}
+
+@keyframes bird {
+  from {transform: translate(-100px);}
+  to {transform: translate(2500px);}
+}
