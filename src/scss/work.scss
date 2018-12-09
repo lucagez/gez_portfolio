@@ -1,0 +1,30 @@
+@import 'main';
+
+body {
+  overflow-x: hidden;
+}
+
+.work-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto minmax(350px, 740px) auto;
+  h1 {
+    margin-bottom: 0;
+  }
+  p {
+    margin: 0 0 10px 0;
+    padding: 5px;
+    font-size: 21px;
+  } 
+}
+
+.my-work {
+  grid-column: 2;
+  margin: 100px 15px 0 15px;
+}
+
+.work {
+  margin: 50px 0;
+}
+

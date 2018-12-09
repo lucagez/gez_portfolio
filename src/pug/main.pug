@@ -4,20 +4,18 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible" content="ie=edge")
-    link(rel="stylesheet" href="../scss/main.scss")
+    title Gez
+    link(rel="stylesheet" href="../scss/landing.scss")
   body
     .me-container
+      include ./templates/nav.pug
       .me
         .case
           h1.title Luca <br> Gesmundo
-          p <a href="/"><span>Data visualization</span></a> and<br><a href="/"><span>Front end</span></a> developer
+          p <span class="data-vis">Data visualization</span> and<br><span class="front-end">Front end</span> developer
       .wkma
-        .nav
-          p <a>work <span>➡</span></a>
-          p <a>get in touch <span>➡</span></a>
-          p <a>me? <span>➡</span></a>
-      .label
+      .label(style="display: none;")
       .work
       include ./templates/bird.pug
-      //- include ./templates/hypno.pug
+      include ./templates/hypno.pug
     script(async src="../js/main.js")

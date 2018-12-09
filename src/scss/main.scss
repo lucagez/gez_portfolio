@@ -1,20 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville|Muli');
 
-@import '_bird';
-@import '_hypno';
-@import '_chart';
-
-$title-size: 72px;
-$sub-size: 48px;
-$nav-size: 26px;
-
 body {
-  background: #f9f9f9;
+  background: linear-gradient(to right, #f9f9f9, #ebedee);
   margin: 0;
   width: 100%;
   min-height: 100vh;
-  overflow: hidden;
 }
 
 h1, p, a {
@@ -27,97 +18,30 @@ h1 {
 
 p {
   font-family: 'Muli', sans-serif;
-
 }
 
 a {
   cursor: pointer;
 }
 
-.me-container {
-  height: 100vh;
-  width: 100%;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: 
-    "wkma ."
-    "me work"
-    "touch .";
-  overflow: hidden;
-}
-
-.me {
-  grid-area: me;
-  display: grid;
-  h1 {
-    font-size: $title-size;
-    font-weight: 400;
-    letter-spacing: 0.09em;
-    margin: 0;
-  }
-  p {
-    color: #999;
-    font-size: $sub-size;
-    letter-spacing: -0.05em;
-    margin: 0;
-  }
-  span {
-    color: #999;
-    text-decoration: underline;
-    text-decoration-color: rgb(167, 167, 167);
-    transition: all 1s;
-  }
-}
-
-.me:hover {
-  span {
-    // color: palevioletred;
-  }
-}
-
-.case {
-  grid-column: 2; 
-}
-
-.wkma {
-  grid-area: wkma;
-  position: relative;
-  height: 100%;
-  width: 100%;
-  p {
-    position: relative;
-    display: inline-block;
-    margin: 0;
-    // transform-origin: 0 0;
-    color: #999;
-    font-size: $nav-size;
-    transition: all .5s;
-
-    padding: 20px 0 0 40px;
-  }
-  span {
-    display: inline-block;
-    // transform: translateY(2px);
-  }
+code {
+  font-size: 18px;
+  color: #888;
+  background: rgba(0,0,0,.05);
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin: 10px;
 }
 
 .label {
-  position: absolute;
+  position: fixed;
+  top: 0;
   z-index: -1;
-  display: none;
+  // display: none;
+  // transition: all .1s;
   img {
-    width: 400px;
+    max-width: 800px;
   }
 }
-
-.work {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  grid-area: work;
-}
-
 
 

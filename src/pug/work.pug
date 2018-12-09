@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
+    title Work
+    link(rel="stylesheet" href="../scss/work.scss")
+  body
+    .work-grid
+      include ./templates/nav.pug  
+      .my-work
+        .work(data="gianluca")
+          h1 
+            a Gianluca Ferretti
+          p   _ Rally Driver 🏁 
+          p <code>React</code> <code>Gatsbyjs</code> <code>Contentful CMS</code>
+        .work(data="tode")
+          h1 
+            a Falegnameria Toderini
+          p _ Carpentry shop 🌲🌲
+          p <code>Parcel</code> <code>scss</code> <code>pug</code>
+        .work(data="climate")
+          h1 
+            a The Climate is Sad
+          p _ Tool for visualizing climate data of the last 114 years
+          p <code>Parcel</code> <code>scss</code> <code>pug</code> <code>custom chart library</code> <code>nodejs</code> <code>cheerio</code> <code>puppeteer</code>
+        .work(data="materials")
+          h1 
+            a The Materials of Everyday Things
+          p _ Visual story about the materials that make up things
+          p <code>vanilla js</code> <code>chart.js</code> <code>nodejs</code> <code>cheerio</code>
+        .work(data="medium")
+          h1 
+            a Medium.css
+          p _ Typographic library for good readability inspired to Medium.com
+          p <code>css</code> <code>NPM</code>
+        .work(data="sky")
+          h1 
+            a Sky
+          p _ React component for easy interactive backgrounds
+          p <code>React</code> <code>NPM</code>
+        .work(data="debucsser")
+          h1 
+            a DebuCSSer
+          p _ Makes your CSS debugging process easier
+          p <code>vanilla js</code> <code>NPM</code>
+        .work(data="bars") 
+          h1 
+            a Bars
+          p _ Svg patterns loading bars
+          p <code>css</code>
+        .work(data="rctl")
+          h1 
+            a React Cloudy to-do List
+          p _ React based todo-list app
+          p <code>React</code>
+        .work(data="tlw") 
+          h1 
+            a The Last War
+          p _ Html game on factories that try to colonize the World
+          p <code>vanilla js</code>
+        .work(data="other") 
+          h1 Codepen Profile
+          p _ Collection of random things I build
+          p <code>miscellaneous</code>
+  .label(style="display: none;")
+  script(src="../js/work.js")

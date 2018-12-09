@@ -1,0 +1,20 @@
+@import '_variables';
+
+.nav {
+  position: absolute;
+  p {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    color: #999;
+    font-size: $nav-size;
+    transition: all .5s;
+    padding: 20px 0 0 40px;
+  }
+  span {
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+  }
+}

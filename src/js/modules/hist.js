@@ -14,7 +14,7 @@ export default class Hist {
     this.make_tool();
     this.has_at_least_one_negative ? this.has_negative() : null;
     this.data.map((val, index) => this.bar(val, index, false));
-    'undicibarre'.split('').forEach((e, i) => this.horizontal_bar(i));
+    // 'undicibarre'.split('').forEach((e, i) => this.horizontal_bar(i));
     this.fluid_params();
     this.update();
   }

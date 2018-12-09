@@ -1,0 +1,67 @@
+@import 'main';
+@import '_variables';
+@import '_bird';
+@import '_hypno';
+@import '_chart';
+
+body {
+  overflow: hidden;
+}
+
+.me-container {
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
+    "wkma ."
+    "me work"
+    "touch .";
+  overflow: hidden;
+  a {
+    text-decoration: none;
+  }
+}
+
+.me {
+  grid-area: me;
+  display: grid;
+  h1 {
+    font-size: $title-size;
+    font-weight: 400;
+    letter-spacing: 0.09em;
+    margin: 0;
+  }
+  p {
+    color: #999;
+    font-size: $sub-size;
+    letter-spacing: -0.05em;
+    margin: 0;
+  }
+  span {
+    color: #999;
+    text-decoration: underline;
+    text-decoration-color: rgb(167, 167, 167);
+    transition: all 1s;
+  }
+}
+
+.me:hover {
+  span {
+    // color: palevioletred;
+  }
+}
+
+.case {
+  grid-column: 2; 
+}
+
+.work {
+  width: 90%;
+  height: 100%;
+  margin: 20px;
+  position: relative;
+  grid-area: work;
+}
