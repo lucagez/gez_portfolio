@@ -7,8 +7,9 @@ mixin bird
       rect(x='2.94153', y='82.2459', width='66.5697', height='11', transform='rotate(-13.2396 2.94153 82.2459)', fill='#777')
       path.wing(d='M34.6539 0.691315L116.039 65.1827L82.179 107.913L34.6539 0.691315Z', fill='#999')
 
-- var n = 0;
-  while n < 10
-    +bird(n++)
+.birds
+  - var n = 0;
+    while n < 10
+        +bird(n++)
 
 

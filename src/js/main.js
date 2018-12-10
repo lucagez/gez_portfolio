@@ -5,4 +5,4 @@ import listener from './modules/word_listener';
 
 fly();
 label();
-listener();
+// listener();

@@ -1,11 +1,17 @@
 $rotation: 10deg;
 $translate: 60px;
 
+.birds {
+  position: absolute;
+  left: -100px;
+  bottom: -50px;
+}
+
 .bird {
   position: absolute;
   width: 80px;
   z-index: -1;
-  transform: translateX(-100px);
+  // transform: translateX(-200px);
   bottom: 0;
   animation: bird 20s infinite ease-in-out;
 }

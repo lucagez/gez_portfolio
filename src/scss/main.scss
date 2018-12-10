@@ -4,8 +4,8 @@
 body {
   background: linear-gradient(to right, #f9f9f9, #ebedee);
   margin: 0;
-  width: 100%;
-  min-height: 100vh;
+  // width: 100%;
+  // min-height: 100vh;
 }
 
 h1, p, a {
@@ -37,10 +37,12 @@ code {
   position: fixed;
   top: 0;
   z-index: -1;
-  // display: none;
-  // transition: all .1s;
+  transition: all .1s;
   img {
     max-width: 800px;
+  }
+  @media screen and (max-width: 740px) {
+    display: none!important;
   }
 }
 

@@ -8,8 +8,11 @@ body {
   min-height: 100vh;
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: auto minmax(350px, 740px) auto;
+  grid-template-columns: auto minmax(250px, 740px) auto;
+  margin: 0 20px;
+  overflow-x: hidden!important;
   h1 {
+    font-family: 'Muli', sans-serif;
     margin-bottom: 0;
   }
   p {
@@ -17,14 +20,36 @@ body {
     padding: 5px;
     font-size: 21px;
   } 
+  @media screen and (max-width: 740px) {
+    h1 {
+      font-size: 26px;
+    }
+    p {
+      font-size: 18px;
+      padding: 10px 0 0 5px;
+    }
+    code {
+      font-size: 14px;
+      margin: 2px;
+    }
+  }
 }
 
 .my-work {
   grid-column: 2;
-  margin: 100px 15px 0 15px;
+  margin-top: 100px;
+  @media screen and (max-width: 740px) {
+    margin-top: 50px;
+  }
 }
 
-.work {
+.work, .touch {
   margin: 50px 0;
+}
+
+.touch {
+  a {
+    color: #888
+  }
 }
 

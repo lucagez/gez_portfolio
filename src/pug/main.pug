@@ -12,10 +12,9 @@ html(lang="en")
       .me
         .case
           h1.title Luca <br> Gesmundo
-          p <span class="data-vis">Data visualization</span> and<br><span class="front-end">Front end</span> developer
+          p <span class="data-vis"><a href="/work.pug">Data visualization</a></span> and<br><span class="front-end"><a href="/work.pug">Front end</a></span> developer
       .wkma
       .label(style="display: none;")
-      .work
       include ./templates/bird.pug
-      include ./templates/hypno.pug
+      //- include ./templates/hypno.pug
     script(async src="../js/main.js")
