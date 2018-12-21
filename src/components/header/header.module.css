@@ -1,0 +1,108 @@
+:root {
+  --text-color: #444;
+  --nav-color: #888;
+  --title-size: 96px;
+  --title-font: 'Libre Baskerville', serif;
+  --text-size: 24px;
+  --text-font: 'Muli', sans-serif;
+}
+
+.header {
+  position: relative;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background: transparent;
+  z-index: 1;
+  transition: all 1s;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.container {
+  display: inline-block;
+  margin: auto;
+
+  text-align: left;
+}
+
+.title {
+  font-family: var(--title-font);
+  font-weight: normal;
+  line-height: 105%;
+  margin: 0 0 10px 20px;
+  font-size: var(--title-size);
+
+  color: var(--text-color);
+}
+
+.bar ul {
+  list-style-type: none;
+}
+
+.bar li {
+  display: inline-block;
+  margin-right: 20px;
+  
+  /* font-family: var(--text-font); */
+  font-family: monospace;
+  font-size: var(--text-size);
+  /* font-weight: bold; */
+}
+
+.me {
+  /* text-decoration-color: #888; */
+  /* font-family: var(--title-font)!important; */
+  /* font-weight: bold; */
+  color: var(--nav-color);
+}
+
+.nav {
+  color: var(--nav-color);
+  /* animation: color-change 6s infinite; */
+  background: #E9F4FF;
+  padding: 3px 2px 3px 6px;
+  border-radius: 5px;
+}
+
+.shadow {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.nav:hover {
+  text-decoration: underline;
+  font-style: italic;
+} 
+
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: 72px;
+  }
+  .bar li {
+    margin-right: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title {
+    font-size: 48px;
+    margin: 0 0 10px 0;
+  }
+  .bar ul {
+    margin-left: 0;
+  }
+  .bar li {
+    font-size: 18px;
+    margin-right: 8px;
+  }
+}
+
+@keyframes color-change {
+  0% { color: #888; }
+  50% { color: rgb(0, 0, 238); }
+  100% { color: #888; }
+}

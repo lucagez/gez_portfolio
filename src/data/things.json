@@ -1,0 +1,89 @@
+[{
+    "id": "bars",
+    "title": "Bars",
+    "description": "Loading bars library using svg patterns",
+    "tags": ["css"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "fiamma",
+    "title": "Gianluca Ferretti",
+    "description": "Rally Driver website 🏁",
+    "tags": ["React", "Gatsbyjs", "Contentful CMS"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "tode",
+    "title": "Falegnameria Toderini",
+    "description": "Carpentry shop 🌲",
+    "tags": ["Parcel", "scss", "pug"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "climate",
+    "title": "The Climate is Sad",
+    "description": "Tool for visualizing climate data of the last 114 years",
+    "tags": ["Parcel", "scss", "pug", "custom", "chart", "library", "nodejs", "cheerio", "puppeteer"],
+    "warn": "Desktop tool <br/> Under development",
+    "link": ""
+  },
+  {
+    "id": "moet",
+    "title": "The Materials of Everyday Things",
+    "description": "Visual story about the materials that make up things",
+    "tags": ["vanilla js", "chart.js", "nodejs", "cheerio"],
+    "warn": "Desktop only visual story",
+    "link": ""
+  },
+  {
+    "id": "medium",
+    "title": "Medium.css",
+    "description": "Typographic library for good readability inspired to Medium.com",
+    "tags": ["css", "NPM"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "sky",
+    "title": "Sky",
+    "description": "React component for easy interactive backgrounds",
+    "tags": ["React"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "debucsser",
+    "title": "DebuCSSer",
+    "description": "Tool that makes your CSS debugging process easier",
+    "tags": ["vanilla JS", "NPM"],
+    "warn": "Desktop only",
+    "link": ""
+  },
+  {
+    "id": "rctl",
+    "title": "React Cloudy to-do List",
+    "description": "React based todo-list app",
+    "tags": ["React"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "tlw",
+    "title": "The Last War",
+    "description": "HTML5 game on factories that are colonizing the World",
+    "tags": ["vanilla JS"],
+    "warn": "",
+    "link": ""
+  },
+  {
+    "id": "capi",
+    "title": "Capi",
+    "description": "Codepen.io unofficial API to query every user",
+    "tags": ["Node.js", "API", "cheerio"],
+    "warn": "",
+    "link": ""
+  }
+]

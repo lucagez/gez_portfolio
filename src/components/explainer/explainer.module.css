@@ -1,0 +1,10 @@
+.explainer {
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: 12px;
+  margin-top: 30px;
+}
+
+.explainer p {
+  color: #888;
+}
