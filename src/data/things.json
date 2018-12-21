@@ -4,7 +4,7 @@
     "description": "Loading bars library using svg patterns",
     "tags": ["css"],
     "warn": "",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/ReMLVV"
   },
   {
     "id": "fiamma",
@@ -12,7 +12,7 @@
     "description": "Rally Driver website 🏁",
     "tags": ["React", "Gatsbyjs", "Contentful CMS"],
     "warn": "",
-    "link": ""
+    "link": "https://www.gianlucaferretti.it/"
   },
   {
     "id": "tode",
@@ -20,7 +20,7 @@
     "description": "Carpentry shop 🌲",
     "tags": ["Parcel", "scss", "pug"],
     "warn": "",
-    "link": ""
+    "link": "http://falegnameriatoderini.surge.sh/"
   },
   {
     "id": "climate",
@@ -28,7 +28,7 @@
     "description": "Tool for visualizing climate data of the last 114 years",
     "tags": ["Parcel", "scss", "pug", "custom", "chart", "library", "nodejs", "cheerio", "puppeteer"],
     "warn": "Desktop tool <br/> Under development",
-    "link": ""
+    "link": "http://climateissad.surge.sh/main.html"
   },
   {
     "id": "moet",
@@ -36,7 +36,7 @@
     "description": "Visual story about the materials that make up things",
     "tags": ["vanilla js", "chart.js", "nodejs", "cheerio"],
     "warn": "Desktop only visual story",
-    "link": ""
+    "link": "http://materialsofeverydaythings.surge.sh/"
   },
   {
     "id": "medium",
@@ -44,7 +44,7 @@
     "description": "Typographic library for good readability inspired to Medium.com",
     "tags": ["css", "NPM"],
     "warn": "",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/bQObBe"
   },
   {
     "id": "sky",
@@ -52,7 +52,7 @@
     "description": "React component for easy interactive backgrounds",
     "tags": ["React"],
     "warn": "",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/oQoRyK"
   },
   {
     "id": "debucsser",
@@ -60,7 +60,7 @@
     "description": "Tool that makes your CSS debugging process easier",
     "tags": ["vanilla JS", "NPM"],
     "warn": "Desktop only",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/LMEerQ"
   },
   {
     "id": "rctl",
@@ -68,7 +68,7 @@
     "description": "React based todo-list app",
     "tags": ["React"],
     "warn": "",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/VxgpMd"
   },
   {
     "id": "tlw",
@@ -76,7 +76,7 @@
     "description": "HTML5 game on factories that are colonizing the World",
     "tags": ["vanilla JS"],
     "warn": "",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/aYejzo"
   },
   {
     "id": "capi",
@@ -84,6 +84,6 @@
     "description": "Codepen.io unofficial API to query every user",
     "tags": ["Node.js", "API", "cheerio"],
     "warn": "",
-    "link": ""
+    "link": "https://codepen.io/lucagez/full/GPNJdE"
   }
 ]
