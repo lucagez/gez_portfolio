@@ -6,7 +6,6 @@
 }
 
 .text {
-  display: inline-block;
   position: absolute;
   top: 50%;
   right: 0;
@@ -44,7 +43,7 @@
     margin-bottom: 80px;
   }
   .text {
-    top: 0%;
+    top: 5%;
     transform: none;
   }
   .text p {
@@ -53,6 +52,13 @@
 }
 
 @media screen and (max-width: 500px) {
+  .container {
+    margin-top: 30px;
+  }
+  .text {
+    top: 5%;
+    transform: none;
+  }
   .text p {
     font-size: 18px;
   }
