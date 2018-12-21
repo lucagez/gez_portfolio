@@ -27,7 +27,7 @@ export default class Label extends Component {
             ${warn}
           </div>
           <div>
-            <a target="_blank" href="${attr['data-link'].value}" class="${shadow}">go to project &#x27A1;</a>
+            <a target="_blank" rel="noopener noreferrer" href="${attr['data-link'].value}" class="${shadow}">go to project &#x27A1;</a>
           </div>
         `
       } else {
