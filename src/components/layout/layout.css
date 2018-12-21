@@ -735,5 +735,4 @@ pre tt:after {
   min-height: 100vh;
   margin: 0 20px;
   scroll-snap-type: y mandatory;
-  position: absolute;
 }
