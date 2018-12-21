@@ -64,5 +64,8 @@
     -webkit-transform: translate(0, -100px);
         -ms-transform: translate(0, -100px);
             transform: translate(0, -100px);
+    -webkit-transition: all .5s cubic-bezier(.47,.36,.69,.99);
+    -o-transition: all .5s cubic-bezier(.47,.36,.69,.99);
+    transition: all .5s cubic-bezier(.47,.36,.69,.99);
   }
 }
