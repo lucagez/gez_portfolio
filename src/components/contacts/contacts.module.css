@@ -1,23 +1,30 @@
 .container {
-  height: 100vh;
+  min-height: 100vh;
   text-align: center;
   scroll-snap-align: start;
+  position: relative;
 }
 
 .text {
   display: inline-block;
-  position: relative;
+  position: absolute;
   top: 50%;
+  right: 0;
+  left: 0;
+  margin: auto;
   transform: translateY(-50%);
   text-align: left;
-  max-width: 630px;
+  max-width: 350px;
   font-family: monospace;
 }
 
 .text h1 {
   font-family: monospace;
-  /* font-family: 'Libre Baskerville', serif; */
   color: #444;
+}
+
+.text p {
+  font-size: 21px;
 }
 
 .text span {
@@ -26,15 +33,9 @@
   border-radius: 5px;
 
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-  -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -ms-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   -o-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-}
-
-.text p {
-  /* font-family: 'Muli', sans-serif; */
-  font-size: 21px;
 }
 
 .text a {
@@ -45,4 +46,23 @@
 .text a:hover {
   text-decoration: underline;
   font-style: italic;
+}
+
+@media screen and (max-width: 350px) {
+  .container {
+    margin-bottom: 80px;
+  }
+  .text {
+    top: 0%;
+    transform: none;
+  }
+  .text p {
+    font-family: sans-serif;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .text p {
+    font-size: 18px;
+  }
 }

@@ -4,13 +4,13 @@ import style from './label.module.css';
 
 export default class Label extends Component {
   componentDidMount() {
-    const label = document.querySelector(`.${style.label}`);
+    const label = document.querySelector(`#label`);
     const is_small = window.innerWidth < 600;
     const shadow = style.linkShadow;
     document.body.addEventListener('click', e => {
-      e.preventDefault();
       const title = e.target.attributes['data-title'];
       if (title) {
+        e.preventDefault();
         const is_right = e.clientX > window.innerWidth / 2;
         const is_bottom = e.clientY > window.innerHeight / 2;
         const attr = e.target.attributes;
@@ -26,10 +26,12 @@ export default class Label extends Component {
             ${attr['data-tags'].value}
             ${warn}
           </div>
+          <a id="goto" href="${attr['data-link'].value}" target="_blank" class="${shadow}">go to project &#x27A1;</a>
           <div>
-            <a target="_blank" rel="noopener noreferrer" href="${attr['data-link'].value}" class="${shadow}">go to project &#x27A1;</a>
           </div>
         `
+      } else if (label.contains(e.target)) {
+        console.log('on label');
       } else {
         label.style.display = 'none';
       }
@@ -42,7 +44,7 @@ export default class Label extends Component {
 
   render() {
     return (
-      <div className={`${style.label} ${style.shadow}`}></div>
+      <div id="label" className={`${style.label} ${style.shadow}`}></div>
     )
   }
 } 
