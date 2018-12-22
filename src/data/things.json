@@ -9,7 +9,7 @@
   {
     "id": "fiamma",
     "title": "Gianluca Ferretti",
-    "description": "Rally Driver website 🏁",
+    "description": "Lightning fast website for lightning fast rally driver ⚡",
     "tags": ["React", "Gatsbyjs", "Contentful CMS"],
     "warn": "",
     "link": "https://www.gianlucaferretti.it/"
@@ -17,7 +17,7 @@
   {
     "id": "tode",
     "title": "Falegnameria Toderini",
-    "description": "Carpentry shop 🌲",
+    "description": "Carpentry shop website 🌲",
     "tags": ["Parcel", "scss", "pug"],
     "warn": "",
     "link": "http://falegnameriatoderini.surge.sh/"
@@ -81,9 +81,17 @@
   {
     "id": "capi",
     "title": "Capi",
-    "description": "Codepen.io unofficial API to query every user",
+    "description": "Codepen.io unofficial API to query users data",
     "tags": ["Node.js", "API", "cheerio"],
     "warn": "",
     "link": "https://codepen.io/lucagez/full/GPNJdE"
+  },
+  {
+    "id": "fagiani",
+    "title": "Fagiani",
+    "description": "Website for Fagiani, gifted illustrator living in Bologna IT",
+    "tags": ["React", "Gatsby.js", "custom CMS", "netlify"],
+    "warn": "",
+    "link": "https://jacopofagiani.com"
   }
 ]
