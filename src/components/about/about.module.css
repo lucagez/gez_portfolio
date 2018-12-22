@@ -61,7 +61,7 @@
 @media screen and (max-width: 500px) {
   .container {
     margin-top: 30px;
-    min-height: 150vh;
+    min-height: 180vh;
   }
   .text {
     top: 5%;
