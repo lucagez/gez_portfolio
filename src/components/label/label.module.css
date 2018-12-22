@@ -10,9 +10,9 @@
   font-family: monospace;
 
   border-radius: 5px;
-  -webkit-transition: all .2s cubic-bezier(.47,.36,.69,.99);
-  -o-transition: all .2s cubic-bezier(.47,.36,.69,.99);
-  transition: all .2s cubic-bezier(.47,.36,.69,.99);
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
 }
 
 .label h1 {
@@ -64,8 +64,8 @@
     -webkit-transform: translate(0, -100px);
         -ms-transform: translate(0, -100px);
             transform: translate(0, -100px);
-    -webkit-transition: all .5s cubic-bezier(.47,.36,.69,.99);
-    -o-transition: all .5s cubic-bezier(.47,.36,.69,.99);
-    transition: all .5s cubic-bezier(.47,.36,.69,.99);
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
   }
 }
