@@ -44,7 +44,7 @@
     "description": "Typographic library for good readability inspired to Medium.com",
     "tags": ["css", "NPM"],
     "warn": "",
-    "link": "https://codepen.io/lucagez/full/bQObBe"
+    "link": "https://github.com/lucagez/medium.css"
   },
   {
     "id": "sky",
@@ -52,7 +52,7 @@
     "description": "React component for easy interactive backgrounds",
     "tags": ["React"],
     "warn": "",
-    "link": "https://codepen.io/lucagez/full/oQoRyK"
+    "link": "https://github.com/lucagez/sky"
   },
   {
     "id": "debucsser",
@@ -60,7 +60,7 @@
     "description": "Tool that makes your CSS debugging process easier",
     "tags": ["vanilla JS", "NPM"],
     "warn": "Desktop only",
-    "link": "https://codepen.io/lucagez/full/LMEerQ"
+    "link": "https://github.com/lucagez/Debucsser"
   },
   {
     "id": "rctl",
