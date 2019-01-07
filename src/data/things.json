@@ -1,5 +1,6 @@
 [{
     "id": "bars",
+    "order": 11,
     "title": "Bars",
     "description": "Loading bars library using svg patterns",
     "tags": ["css"],
@@ -8,6 +9,7 @@
   },
   {
     "id": "fiamma",
+    "order": 2,
     "title": "Gianluca Ferretti",
     "description": "Lightning fast website for lightning fast rally driver ⚡",
     "tags": ["React", "Gatsbyjs", "Contentful CMS"],
@@ -16,6 +18,7 @@
   },
   {
     "id": "tode",
+    "order": 8,
     "title": "Falegnameria Toderini",
     "description": "Carpentry shop website 🌲",
     "tags": ["Parcel", "scss", "pug"],
@@ -24,6 +27,7 @@
   },
   {
     "id": "climate",
+    "order": 7,
     "title": "The Climate is Sad",
     "description": "Tool for visualizing climate data of the last 114 years",
     "tags": ["Parcel", "scss", "pug", "custom", "chart", "library", "nodejs", "cheerio", "puppeteer"],
@@ -32,6 +36,7 @@
   },
   {
     "id": "moet",
+    "order": 6,
     "title": "The Materials of Everyday Things",
     "description": "Visual story about the materials that make up things",
     "tags": ["vanilla js", "chart.js", "nodejs", "cheerio"],
@@ -40,6 +45,7 @@
   },
   {
     "id": "medium",
+    "order": 4,
     "title": "Medium.css",
     "description": "Typographic library for good readability inspired to Medium.com",
     "tags": ["css", "NPM"],
@@ -48,6 +54,7 @@
   },
   {
     "id": "sky",
+    "order": 5,
     "title": "Sky",
     "description": "React component for easy interactive backgrounds",
     "tags": ["React"],
@@ -56,6 +63,7 @@
   },
   {
     "id": "debucsser",
+    "order": 1,
     "title": "DebuCSSer",
     "description": "Tool that makes your CSS debugging process easier",
     "tags": ["vanilla JS", "NPM"],
@@ -64,6 +72,7 @@
   },
   {
     "id": "rctl",
+    "order": 10,
     "title": "React Cloudy to-do List",
     "description": "React based todo-list app",
     "tags": ["React"],
@@ -72,6 +81,7 @@
   },
   {
     "id": "tlw",
+    "order": 12,
     "title": "The Last War",
     "description": "HTML5 game on factories that are colonizing the World",
     "tags": ["vanilla JS"],
@@ -80,6 +90,7 @@
   },
   {
     "id": "capi",
+    "order": 9,
     "title": "Capi",
     "description": "Codepen.io unofficial API to query users data",
     "tags": ["Node.js", "API", "cheerio"],
@@ -88,6 +99,7 @@
   },
   {
     "id": "fagiani",
+    "order": 3,
     "title": "Fagiani",
     "description": "Website for Fagiani, gifted illustrator living in Bologna IT",
     "tags": ["React", "Gatsby.js", "custom CMS", "netlify"],

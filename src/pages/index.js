@@ -23,31 +23,56 @@ const IndexPage = ({ data }) => {
     const node = e.node;
     things[node.id] = {};
     things[node.id].title = node.title;
+    things[node.id].order = node.order;
     things[node.id].description = node.description;
     things[node.id].tags = node.tags.map(e => `<code>${e}</code>`).reduce((a, b) => a + b);
     things[node.id].link = node.link;
     things[node.id].warning = node.warn;
-  })
+  });
+  console.log(data.images.edges.map(e => things[e.node.name]).sort((a, b) => a.order - b.order));
 
   const images = data.images.edges.map(e => {
-      const node = e.node;
-      const name = node.name.split('-')[1];
-      const title = things[name].title;
-      const description = things[name].description;
-      const tags = things[name].tags;
-      const warning = things[name].warning;
-      const link = things[name].link;
+    const node = e.node;
+    const name = node.name;
+    const title = things[name].title;
+    const description = things[name].description;
+    const tags = things[name].tags;
+    const warning = things[name].warning;
+    const link = things[name].link;
+    const order = things[name].order;
+    
+    return {
+      src: node.publicURL,
+      name: node.name,
+      title,
+      description,
+      tags,
+      warning,
+      link,
+      order,
+    }
+  }).sort((a, b) => a.order - b.order);
+  console.log(images);
+  
+    // const video = data.video.edges.map(e => {
+    //   const node = e.node;
+    //   const name = node.name;
+    //   const title = things[name].title;
+    //   const description = things[name].description;
+    //   const tags = things[name].tags;
+    //   const warning = things[name].warning;
+    //   const link = things[name].link;
 
-      return {
-        src: node.publicURL,
-        name: node.name.split('-')[1],
-        title,
-        description,
-        tags,
-        warning,
-        link
-      }
-    });
+    //   return {
+    //     src: node.publicURL,
+    //     name: node.name.split('-')[1],
+    //     title,
+    //     description,
+    //     tags,
+    //     warning,
+    //     link
+    //   }
+    // });
   
   return (
     <Layout>
@@ -76,10 +101,19 @@ query {
       }
     }
   }
+  video:allFile(filter: { sourceInstanceName: { eq: "video" } }, sort: { order: ASC, fields: [absolutePath] }) {
+    edges {
+      node {
+        publicURL
+        name
+      }
+    }
+  }
   things:allJson {
     edges {
       node {
         id
+        order
         title
         tags
         link

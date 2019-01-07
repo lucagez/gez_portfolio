@@ -24,6 +24,13 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: `video`,
+        path: `${__dirname}/src/video`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
         name: `things`,
         path: `${__dirname}/src/data/`,
       },
@@ -34,23 +41,12 @@ module.exports = {
         typeName: `Json`
       },
     },
-    'gatsby-transformer-sharp',
-    'gatsby-plugin-sharp',
+    // 'gatsby-transformer-sharp',
+    // 'gatsby-plugin-sharp',
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Luca Gesmundo | web developer`,
-        short_name: 'lucagez',
-        start_url: '/',
-        background_color: '#E9F4FF',
-        theme_color: '#E9F4FF',
-        display: 'minimal-ui'
-      },
-    },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `lucagez`,
+        name: `Luca Gesmundo`,
         short_name: `lucagez`,
         start_url: `/`,
         background_color: `#f7f0eb`,

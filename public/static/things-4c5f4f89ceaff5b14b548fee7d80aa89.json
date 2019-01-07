@@ -1,0 +1,97 @@
+[{
+    "id": "bars",
+    "title": "Bars",
+    "description": "Loading bars library using svg patterns",
+    "tags": ["css"],
+    "warn": "",
+    "link": "https://codepen.io/lucagez/full/ReMLVV"
+  },
+  {
+    "id": "fiamma",
+    "title": "Gianluca Ferretti",
+    "description": "Lightning fast website for lightning fast rally driver ⚡",
+    "tags": ["React", "Gatsbyjs", "Contentful CMS"],
+    "warn": "",
+    "link": "https://www.gianlucaferretti.it/"
+  },
+  {
+    "id": "tode",
+    "title": "Falegnameria Toderini",
+    "description": "Carpentry shop website 🌲",
+    "tags": ["Parcel", "scss", "pug"],
+    "warn": "",
+    "link": "http://falegnameriatoderini.surge.sh/"
+  },
+  {
+    "id": "climate",
+    "title": "The Climate is Sad",
+    "description": "Tool for visualizing climate data of the last 114 years",
+    "tags": ["Parcel", "scss", "pug", "custom", "chart", "library", "nodejs", "cheerio", "puppeteer"],
+    "warn": "Desktop tool <br/> Under development",
+    "link": "http://climateissad.surge.sh/main.html"
+  },
+  {
+    "id": "moet",
+    "title": "The Materials of Everyday Things",
+    "description": "Visual story about the materials that make up things",
+    "tags": ["vanilla js", "chart.js", "nodejs", "cheerio"],
+    "warn": "Desktop only visual story",
+    "link": "http://materialsofeverydaythings.surge.sh/"
+  },
+  {
+    "id": "medium",
+    "title": "Medium.css",
+    "description": "Typographic library for good readability inspired to Medium.com",
+    "tags": ["css", "NPM"],
+    "warn": "",
+    "link": "https://github.com/lucagez/medium.css"
+  },
+  {
+    "id": "sky",
+    "title": "Sky",
+    "description": "React component for easy interactive backgrounds",
+    "tags": ["React"],
+    "warn": "",
+    "link": "https://github.com/lucagez/sky"
+  },
+  {
+    "id": "debucsser",
+    "title": "DebuCSSer",
+    "description": "Tool that makes your CSS debugging process easier",
+    "tags": ["vanilla JS", "NPM"],
+    "warn": "Desktop only",
+    "link": "https://github.com/lucagez/Debucsser"
+  },
+  {
+    "id": "rctl",
+    "title": "React Cloudy to-do List",
+    "description": "React based todo-list app",
+    "tags": ["React"],
+    "warn": "",
+    "link": "https://codepen.io/lucagez/full/VxgpMd"
+  },
+  {
+    "id": "tlw",
+    "title": "The Last War",
+    "description": "HTML5 game on factories that are colonizing the World",
+    "tags": ["vanilla JS"],
+    "warn": "",
+    "link": "https://codepen.io/lucagez/full/aYejzo"
+  },
+  {
+    "id": "capi",
+    "title": "Capi",
+    "description": "Codepen.io unofficial API to query users data",
+    "tags": ["Node.js", "API", "cheerio"],
+    "warn": "",
+    "link": "https://codepen.io/lucagez/full/GPNJdE"
+  },
+  {
+    "id": "fagiani",
+    "title": "Fagiani",
+    "description": "Website for Fagiani, gifted illustrator living in Bologna IT",
+    "tags": ["React", "Gatsby.js", "custom CMS", "netlify"],
+    "warn": "",
+    "link": "https://jacopofagiani.com"
+  }
+]
