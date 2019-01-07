@@ -2,25 +2,27 @@ import React, { Component } from 'react';
 
 import style from './gallery.module.css';
 import Img from '../image/image.js';
+import VIDEO from '../video/video.js';
 
 export default class Gallery extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      items: this.props.images.map(e => e.full),
-    }
+    // this.state = {
+    //   items: this.props.images.map(e => e.full),
+    // }
     this.onIntersection = this.onIntersection.bind(this);
   }
   componentDidMount() {
-    const images = document.querySelector('#gallery').querySelectorAll('img');
+    // const images = document.querySelector('#gallery').querySelectorAll('img');
+    const video = document.querySelector('#gallery').querySelectorAll('video');
     const config = {
       rootMargin: '0px',
       threshold: 0.1
     };
 
     this.observer = new IntersectionObserver(this.onIntersection, config);
-    images.forEach(image => {
-      this.observer.observe(image);
+    video.forEach(v => {
+      this.observer.observe(v);
     });
 
   }
@@ -33,9 +35,22 @@ export default class Gallery extends Component {
     });
   }
   render() {
-    const images = this.props.images.map((e, i) => {
+    // const images = this.props.images.map((e, i) => {
+    //   return (
+    //   <Img 
+    //     title={e.title}
+    //     description={e.description}
+    //     tags={e.tags}
+    //     warning={e.warning}
+    //     link={e.link}
+    //     src={e.src} 
+    //     key={i}
+    //   />);
+    // });
+
+    const video = this.props.video.map((e, i) => {
       return (
-      <Img 
+      <VIDEO 
         title={e.title}
         description={e.description}
         tags={e.tags}
@@ -48,7 +63,7 @@ export default class Gallery extends Component {
 
     return (
       <div id='gallery' className={`${style.gallery}`}>
-        {images}
+        {video}
       </div>
     )
   }
