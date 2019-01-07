@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Luca Gesmundo | web developer`,
+    title: `Luca Gesmundo | web developer | personal website`,
     author: `Luca Gesmundo`,
-    description: `Personal website of Luca Gesmundo. Web developer. Javascript expert.`,
+    description: `I always try to learn something from someone.`,
     siteUrl: `https://lucagez.net/`,
     social: {
       twitter: `lucagez`,

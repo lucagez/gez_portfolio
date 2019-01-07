@@ -35,11 +35,13 @@ const SEO = ({ data }) => (
         'node',
         ]
       const site = data.site.siteMetadata;
+      console.log(site.title)
       return (
         <Helmet
           htmlAttributes={site.lang}
           title={site.title}
-          titleTemplate={`%s | ${site.title}`}
+          titleTemplate={`${site.title}`}
+          lang={`en`}
           meta={[
             {
               name: `description`,
