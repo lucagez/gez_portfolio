@@ -19,7 +19,7 @@ export default class Label extends Component {
         label.style.display = 'block';
         // setTimeout(() => label.style.transform = `translate(${x}, ${y})`, 1);
         window.requestAnimationFrame(() => {
-          label.style.transform = `translate(${x}, ${y})`;
+          label.style.transform = `translate(${x}, ${y}) rotateZ(360deg)`;
         });
         const warn = attr['data-warning'].value ? `<strong>${attr['data-warning'].value}</strong>` : ''
         label.innerHTML = `

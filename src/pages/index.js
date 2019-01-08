@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
     You can check it out here: 
     link
   `;
-  console.log(greeting_message);
+  // console.log(greeting_message);
   const things = {};
   data.things.edges.forEach(e => {
     const node = e.node;

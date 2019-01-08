@@ -14,12 +14,13 @@ export default class Gallery extends Component {
   }
   componentDidMount() {
     // const images = document.querySelector('#gallery').querySelectorAll('img');
+    var isFirefox = /Android.+Firefox\//.test(navigator.userAgent);
     const video = document.querySelector('#gallery').querySelectorAll('video');
     const config = {
       rootMargin: '0px',
       threshold: 0.1
     };
-
+    if (isFirefox) video.forEach(e => e.setAttribute('autoplay', ''));
     video.forEach(e => {
       e.addEventListener('mouseover', e => {
         e.target.play();

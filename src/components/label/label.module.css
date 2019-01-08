@@ -8,11 +8,14 @@
   display: none;
   padding: 20px;
   font-family: monospace;
-
   border-radius: 5px;
-  -webkit-transition: all .6s ease-out;
-  -o-transition: all .6s ease-out;
-  transition: all .6s ease-out;
+  -webkit-transition: all .6s;
+  -o-transition: all .6s;
+  transition: all .6s;
+  will-change: transform;
+
+  backface-visibility: hidden;
+  perspective: 1000;
 }
 
 .label h1 {
@@ -21,7 +24,9 @@
   font-size: 26px;
 }
 
-.label code, .label strong, .label a  {
+.label code,
+.label strong,
+.label a {
   font-size: 14px;
   border-radius: 3px;
   padding: 2px 5px;
@@ -62,8 +67,8 @@
     top: unset;
     width: 90%;
     -webkit-transform: translate(0, -100px);
-        -ms-transform: translate(0, -100px);
-            transform: translate(0, -100px);
+    -ms-transform: translate(0, -100px);
+    transform: translate(0, -100px);
     -webkit-transition: none;
     -o-transition: none;
     transition: none;
