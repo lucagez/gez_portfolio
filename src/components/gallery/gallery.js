@@ -20,6 +20,16 @@ export default class Gallery extends Component {
       threshold: 0.1
     };
 
+    video.forEach(e => {
+      e.addEventListener('mouseover', e => {
+        e.target.play();
+        e.target.parentNode.classList.toggle('pulse');
+      });
+      e.addEventListener('mouseout', e => {
+        e.target.pause();
+        e.target.parentNode.classList.toggle('pulse');
+      });
+    })
     this.observer = new IntersectionObserver(this.onIntersection, config);
     video.forEach(v => {
       this.observer.observe(v);

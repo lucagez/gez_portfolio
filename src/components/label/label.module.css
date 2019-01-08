@@ -10,9 +10,9 @@
   font-family: monospace;
 
   border-radius: 5px;
-  -webkit-transition: all .6s;
-  -o-transition: all .6s;
-  transition: all .6s;
+  -webkit-transition: all .6s ease-out;
+  -o-transition: all .6s ease-out;
+  transition: all .6s ease-out;
 }
 
 .label h1 {

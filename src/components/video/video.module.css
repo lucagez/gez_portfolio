@@ -22,7 +22,7 @@
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   cursor: pointer;
-
+  border-radius: 3px;
   -webkit-tap-highlight-color: transparent;
 }
 

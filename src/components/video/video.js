@@ -1,10 +1,10 @@
 import React from 'react';
 
 import style from './video.module.css';
-
+// autoPlay
 export default (props) => (
   <div className={`${style.item}`}>
-    <video loop muted autoPlay playsInline
+    <video loop muted playsInline
       data-title={props.title}
       data-description={props.description}
       data-tags={props.tags}

@@ -29,7 +29,7 @@
 .title {
   font-family: var(--title-font);
   font-weight: normal;
-  line-height: 105%;
+  line-height: normal;
   margin: 0 0 10px 20px;
   font-size: var(--title-size);
 

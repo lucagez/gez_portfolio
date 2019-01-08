@@ -4,6 +4,7 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -735,4 +736,36 @@ pre tt:after {
   min-height: 100vh;
   margin: 0 20px;
   scroll-snap-type: y mandatory;
+}
+
+.pulse {
+  box-shadow: 0 0 0 0 rgba(167, 209, 252, 1);
+  -webkit-animation: pulse 1.25s cubic-bezier(0.66, 0, 0, 1);
+  -moz-animation: pulse 1.25s cubic-bezier(0.66, 0, 0, 1);
+  -ms-animation: pulse 1.25s cubic-bezier(0.66, 0, 0, 1);
+  animation: pulse 1.25s cubic-bezier(0.66, 0, 0, 1);
+}
+
+@-webkit-keyframes pulse {
+  to {
+      box-shadow: 0 0 0 20px rgba(165, 207, 248, 0);
+  }
+}
+
+@-moz-keyframes pulse {
+  to {
+      box-shadow: 0 0 0 20px rgba(167, 209, 252, 0);
+  }
+}
+
+@-ms-keyframes pulse {
+  to {
+      box-shadow: 0 0 0 20px rgba(167, 209, 252, 0);
+  }
+}
+
+@keyframes pulse {
+  to {
+      box-shadow: 0 0 0 20px rgba(167, 209, 252, 0);
+  }
 }

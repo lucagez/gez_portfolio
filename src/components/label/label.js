@@ -17,7 +17,10 @@ export default class Label extends Component {
         const x = is_small ? '-50%' : `${e.clientX + (is_right ? -400 : 20)}px`;
         const y = is_small ? '0' : `${e.clientY + (is_bottom ? -200 : 20)}px`;
         label.style.display = 'block';
-        setTimeout(() => label.style.transform = `translate(${x}, ${y})`, 1);
+        // setTimeout(() => label.style.transform = `translate(${x}, ${y})`, 1);
+        window.requestAnimationFrame(() => {
+          label.style.transform = `translate(${x}, ${y})`;
+        });
         const warn = attr['data-warning'].value ? `<strong>${attr['data-warning'].value}</strong>` : ''
         label.innerHTML = `
           <h1>${title.value}</h1>
