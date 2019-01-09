@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Muli");
+body {
+  background: linear-gradient(to right, #f9f9f9, #ebedee);
+  margin: 0;
+}
+
+h1, p, a {
+  color: #444;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+p {
+  font-family: "Muli", sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+code {
+  font-size: 18px;
+  color: #888;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin: 10px;
+}
+
+.label {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  transition: all 0.1s;
+}
+.label img {
+  max-width: 800px;
+}
+@media screen and (max-width: 740px) {
+  .label {
+    display: none !important;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.work-grid {
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: auto minmax(250px, 740px) auto;
+  margin: 0 20px;
+  overflow-x: hidden !important;
+}
+.work-grid h1 {
+  font-family: "Muli", sans-serif;
+  margin-bottom: 0;
+}
+.work-grid p {
+  margin: 0 0 10px 0;
+  padding: 5px;
+  font-size: 21px;
+}
+@media screen and (max-width: 740px) {
+  .work-grid h1 {
+    font-size: 26px;
+  }
+  .work-grid p {
+    font-size: 18px;
+    padding: 10px 0 0 5px;
+  }
+  .work-grid code {
+    font-size: 14px;
+    margin: 2px;
+  }
+}
+
+.my-work {
+  grid-column: 2;
+  margin-top: 100px;
+}
+@media screen and (max-width: 740px) {
+  .my-work {
+    margin-top: 50px;
+  }
+}
+
+.work, .touch {
+  margin: 50px 0;
+}
+
+.touch a {
+  color: #888;
+}

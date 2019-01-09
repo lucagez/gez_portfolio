@@ -1,0 +1,312 @@
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Muli");
+body {
+  background: linear-gradient(to right, #f9f9f9, #ebedee);
+  margin: 0;
+}
+
+h1, p, a {
+  color: #444;
+}
+
+h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+p {
+  font-family: "Muli", sans-serif;
+}
+
+a {
+  cursor: pointer;
+}
+
+code {
+  font-size: 18px;
+  color: #888;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 2px;
+  padding: 3px 5px;
+  margin: 10px;
+}
+
+.label {
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  transition: all 0.1s;
+}
+.label img {
+  max-width: 800px;
+}
+@media screen and (max-width: 740px) {
+  .label {
+    display: none !important;
+  }
+}
+
+.birds {
+  position: absolute;
+  left: -100px;
+  bottom: -50px;
+}
+
+.bird {
+  position: absolute;
+  width: 80px;
+  z-index: -1;
+  bottom: 0;
+  animation: bird 20s infinite ease-in-out;
+}
+
+.body {
+  animation: body 3s infinite;
+}
+
+.wing {
+  transform-origin: 60% 60%;
+  animation: wing 2s infinite linear;
+}
+
+@keyframes wing {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(150deg) translateY(22px);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+@keyframes body {
+  0% {
+    transform: translateY(60px);
+  }
+  50% {
+    transform: translateY(-120px);
+  }
+  100% {
+    transform: translateY(60px);
+  }
+}
+@keyframes bird {
+  from {
+    transform: translate(-100px);
+  }
+  to {
+    transform: translate(2500px);
+  }
+}
+#hypno {
+  display: inline-block;
+  height: 80%;
+  display: none;
+}
+
+#hypno path {
+  fill: #444;
+  stroke: #f9f9f9;
+  stroke-width: 0.5;
+}
+
+.hypno-container {
+  position: absolute;
+  margin: auto;
+  height: 100vh;
+  overflow: hidden;
+  z-index: -2;
+  right: -5%;
+  top: -5%;
+}
+
+.wise,
+.counter {
+  animation: rotate 9s infinite linear;
+  transform-origin: 50% 50%;
+}
+
+.counter {
+  animation-direction: reverse;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media screen and (max-width: 800px) {
+  #spinner {
+    width: 110vw;
+  }
+}
+.chart-container {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "chart" "chart";
+}
+
+.chart {
+  grid-area: chart;
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 10px;
+  width: 100%;
+  height: 90%;
+  padding: 0px 20px;
+  margin-bottom: 0;
+  border-bottom: 3px solid #888;
+  margin: 20px;
+}
+
+.horizontal-bar {
+  position: absolute;
+  border-top: 1px dashed #8c8b8b;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  z-index: -1;
+  transform: translateY(-2px);
+}
+
+.bar {
+  position: relative;
+  display: flex;
+  border-radius: 6px 6px 0 0;
+  background-color: #444;
+  grid-row-start: 1;
+  grid-row-end: 101;
+  align-self: flex-end;
+  align-items: flex-end;
+  justify-content: center;
+  height: 0;
+  max-height: 100%;
+  cursor: pointer;
+  transition: height 1s;
+}
+
+.label {
+  position: absolute;
+  display: flex;
+  transform: rotate(-15deg);
+  margin: auto;
+  transition: transform 0.5s;
+}
+
+.negative-bar {
+  transform-origin: 50% 100%;
+  transform: rotate(180deg);
+}
+
+.negative-bar .label {
+  transform: rotate(165deg);
+  opacity: 0.8;
+}
+
+[class*=bar]:hover {
+  opacity: 0.8;
+  background-color: #333 !important;
+}
+
+.tool {
+  position: fixed;
+  padding: 20px;
+  font-family: monospace;
+  background: #333;
+  opacity: 0.9;
+  color: #f9f9f9;
+  border-radius: 3px;
+  visibility: hidden;
+  float: left;
+}
+
+body {
+  overflow: hidden !important;
+}
+
+.me-container {
+  height: 100vh;
+  display: grid;
+  align-items: center;
+  margin: 0 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "wkma ." "me work" "touch .";
+  overflow-x: hidden !important;
+}
+.me-container a {
+  text-decoration: none;
+}
+
+.me {
+  grid-area: me;
+  display: grid;
+}
+.me h1 {
+  font-size: 72px;
+  font-weight: 400;
+  letter-spacing: 0.09em;
+  margin: 0;
+}
+.me p {
+  color: #999;
+  font-size: 48px;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+.me span {
+  text-decoration: underline;
+  text-decoration-color: #a7a7a7;
+  transition: all 1s;
+}
+
+.case {
+  grid-column: 2;
+}
+.case a {
+  color: #999;
+}
+
+.work {
+  width: 90%;
+  height: 100%;
+  margin: 20px;
+  position: relative;
+  grid-area: work;
+}
+
+@media screen and (max-width: 740px) {
+  .me-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: "wkma" "me" "touch";
+  }
+
+  .me h1 {
+    font-size: 48px;
+  }
+  .me p {
+    font-size: 28px;
+    letter-spacing: 0;
+  }
+
+  .case {
+    grid-column: 1;
+  }
+}
+@media screen and (max-width: 400px) {
+  .me h1 {
+    font-size: 44px;
+  }
+  .me p {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
+}
